@@ -75,10 +75,44 @@ Once you have these prerequisites installed and configured, you're ready to proc
   git clone https://github.com/sasmithx/FlaskDataMateX.git
 ```
 
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Shield.png" alt="Shield" width="25" height="25" /> JWT Authentication
+
+FlaskDataMateX implements JSON Web Token (JWT) authentication to secure API endpoints and manage user sessions. JWT is a compact, URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is used as the payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption (JWE) structure, enabling you to verify the token's authenticity.
+
+### How JWT Works
+
+1. **User Login**: 
+   - Users can log in by providing their credentials (username and password) to the `/auth/login` endpoint.
+   - Upon successful authentication, the server generates a JWT token containing user information and an expiration time.
+
+2. **Token Generation**: 
+   - The generated token is signed with a secret key using the HMAC SHA-256 algorithm. This ensures the token's integrity and authenticity.
+
+3. **Token Usage**: 
+   - The token is returned to the user and should be included in the Authorization header for subsequent API requests that require authentication.
+   - The format for including the token is: 
+     ```
+     Authorization: Bearer <token>
+     ```
+
+4. **Token Validation**: 
+   - Each protected endpoint is decorated with a `@token_required` decorator that checks for the presence and validity of the token.
+   - If the token is valid, the requested operation proceeds; if not, the server responds with an error message.
+
+### Implementing JWT in FlaskDataMateX
+
+- **Authentication Endpoints**:
+  - **POST `/auth/login`**: Accepts a JSON payload with `username` and `password`. Returns a JWT token if credentials are valid.
+
+- **Protected Endpoints**:
+  - To protect any endpoint, simply use the `@token_required` decorator. This ensures that only authenticated users can access these endpoints.
+
 
 ## <img src="https://user-images.githubusercontent.com/74038190/216122069-5b8169d7-1d8e-4a13-b245-a8e4176c99f8.png" style="width: 50px; height: 50px;" alt=""> License
 
 This project is licensed under the MIT License - see the [MIT License](LICENSE) file for details.
+
+<br>
 
 <div align="center" style="display: flex; align-items: flex-start;">
     <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" width="65" height="65" />
