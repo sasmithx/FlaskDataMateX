@@ -60,10 +60,8 @@ Before running the FlaskDataMateX project, ensure you have the following install
      ```
 
 7. **MySQL Database Setup**: Ensure you have a MySQL database set up and running, with a database named `FlaskDataMateX` as required by the app.
-   - You can create the database using the following SQL command:
-     ```sql
-     CREATE DATABASE FlaskDataMateX;
-     ```
+   
+<br>
 
 Once you have these prerequisites installed and configured, you're ready to proceed with setting up and running FlaskDataMateX.
 
@@ -74,6 +72,7 @@ Once you have these prerequisites installed and configured, you're ready to proc
 ```bash
   git clone https://github.com/sasmithx/FlaskDataMateX.git
 ```
+<br>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Shield.png" alt="Shield" width="25" height="25" /> JWT Authentication
 
