@@ -2,7 +2,7 @@
 ![Logo](https://static.wixstatic.com/media/b2dfda_1c51fe6397954d13a39841c7f66f4a7d~mv2.png/v1/fill/w_480,h_300,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b2dfda_1c51fe6397954d13a39841c7f66f4a7d~mv2.png)
 
 
-# FlaskDataMateX
+<div align="center" ><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Poppins&size=30&pause=1000&color=AFF78A&width=435&lines=FlaskDataMateX" alt="Typing SVG" /></a></div>
 
 ## Introduction
 
